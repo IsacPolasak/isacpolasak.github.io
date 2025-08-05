@@ -334,6 +334,7 @@ h5 {
     max-width: 820px;
     border-top: solid 2px var(--gray-color);
     padding-top: 50px;
+    margin-bottom: 30px;
 }
 
 .empathize-left {

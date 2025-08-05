@@ -2,34 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const sectionTracker = document.getElementById('section-tracker');
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#section-tracker a');
-    
-    // Function to check if user has scrolled to empathize section or below
-    // function updateNavVisibility() {
-    //     const empathizeSection = document.getElementById('empathize');
-    //     const footer = document.querySelector('footer');
-        
-    //     if (!empathizeSection || !footer) return;
-        
-    //     const empathizeTop = empathizeSection.offsetTop;
-    //     const scrollPosition = window.pageYOffset;
-    //     const windowHeight = window.innerHeight;
-        
-    //     // Check if footer is halfway visible
-    //     const footerTop = footer.offsetTop;
-    //     const footerHalfwayPoint = footerTop - (windowHeight / 2);
-        
-    //     // Show nav when user reaches empathize section but hide when footer is halfway visible
-    //     if (scrollPosition >= empathizeTop  && scrollPosition < footerHalfwayPoint) {
-    //         sectionTracker.style.opacity = '1';
-    //         sectionTracker.style.visibility = 'visible';
-    //     } else {
-    //         sectionTracker.style.opacity = '0';
-    //         sectionTracker.style.visibility = 'hidden';
-    //     }
-    // }
 
     function updateNavVisibility() {
-    const empathizeSection = document.getElementById('empathize');
+    const section = document.getElementById('empathize') || document.getElementById('idea');
     const footer = document.querySelector('footer');
     const sectionTracker = document.getElementById('section-tracker');
     
@@ -53,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 
-    
     // Function to update active nav link
     function updateActiveSection() {
         let currentSection = '';
@@ -107,3 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
     updateNavVisibility();
     updateActiveSection();
 });
+
+
+
+
+
+
+
