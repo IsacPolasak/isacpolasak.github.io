@@ -4,7 +4,9 @@
     --gray-active: #2c2c2c;
     --greige-color: #F5F7F8;
     --blue-hover: rgb(0, 128, 255);
+    --darker-greige: rgb(220, 228, 239);
 }
+
 
 * {
     font-family: 'Manrope', sans-serif;

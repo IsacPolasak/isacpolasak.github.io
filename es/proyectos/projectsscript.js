@@ -2,58 +2,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const sectionTracker = document.getElementById('section-tracker');
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#section-tracker a');
-    
-    // Function to check if user has scrolled to empathize section or below
-    // function updateNavVisibility() {
-    //     const empathizeSection = document.getElementById('empathize');
-    //     const footer = document.querySelector('footer');
-        
-    //     if (!empathizeSection || !footer) return;
-        
-    //     const empathizeTop = empathizeSection.offsetTop;
-    //     const scrollPosition = window.pageYOffset;
-    //     const windowHeight = window.innerHeight;
-        
-    //     // Check if footer is halfway visible
-    //     const footerTop = footer.offsetTop;
-    //     const footerHalfwayPoint = footerTop - (windowHeight / 2);
-        
-    //     // Show nav when user reaches empathize section but hide when footer is halfway visible
-    //     if (scrollPosition >= empathizeTop  && scrollPosition < footerHalfwayPoint) {
-    //         sectionTracker.style.opacity = '1';
-    //         sectionTracker.style.visibility = 'visible';
-    //     } else {
-    //         sectionTracker.style.opacity = '0';
-    //         sectionTracker.style.visibility = 'hidden';
-    //     }
-    // }
 
     function updateNavVisibility() {
-    const empathizeSection = document.getElementById('empathize');
-    const footer = document.querySelector('footer');
-    const sectionTracker = document.getElementById('section-tracker');
-    
-    if (!empathizeSection || !footer) return;
+        // Check which page we're on by looking for specific sections
+        const empathizeSection = document.getElementById('empathize'); // BIB page
+        const planSection = document.getElementById('plan'); // Anvaya page
+        const footer = document.querySelector('footer');
+        
+        if (!footer || !sectionTracker) return;
 
-    const empathizeTop = empathizeSection.offsetTop;
-    const scrollPosition = window.pageYOffset;
-    const windowHeight = window.innerHeight;
-    const footerTop = footer.offsetTop;
-    const footerHalfwayPoint = footerTop - (windowHeight / 2);
+        // Determine the trigger section based on which page we're on
+        const triggerSection = empathizeSection || planSection;
+        if (!triggerSection) return;
 
-    // Stick to top after scrolling past empathize
-    if (scrollPosition >= empathizeTop && scrollPosition < footerHalfwayPoint) {
-        sectionTracker.classList.add('sticky');
-        sectionTracker.style.opacity = '1';
-        sectionTracker.style.visibility = 'visible';
-    } else {
-        sectionTracker.classList.remove('sticky');
-        sectionTracker.style.opacity = '0';
-        sectionTracker.style.visibility = 'hidden';
+        const triggerTop = triggerSection.offsetTop;
+        const scrollPosition = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        const footerTop = footer.offsetTop;
+        const footerHalfwayPoint = footerTop - (windowHeight / 2);
+
+        // Stick to top after scrolling past the trigger section
+        if (scrollPosition >= triggerTop && scrollPosition < footerHalfwayPoint) {
+            sectionTracker.classList.add('sticky');
+            sectionTracker.style.opacity = '1';
+            sectionTracker.style.visibility = 'visible';
+        } else {
+            sectionTracker.classList.remove('sticky');
+            sectionTracker.style.opacity = '0';
+            sectionTracker.style.visibility = 'hidden';
+        }
     }
-}
 
-    
     // Function to update active nav link
     function updateActiveSection() {
         let currentSection = '';
@@ -80,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetSection = document.getElementById(targetId);
         if (!targetSection) return;
         
-        const targetPosition = targetSection.offsetTop + 75; 
+        const targetPosition = targetSection.offsetTop - 75; 
         
         window.scrollTo({
             top: targetPosition,
