@@ -1082,12 +1082,6 @@ Section 5: Reflection
     flex: 1; 
 }
 
-.sparkle {
-    display: inline-block;
-    font-size: 1.2rem;
-    margin: 0 5px;
-}
-
 .accessibility-section {
     flex: 1;
     display: flex;
