@@ -702,6 +702,7 @@ Section 4: Prototype
     gap: 60px;
     width: 100%;
     margin-bottom: 30px;
+    align-items: center;
 }
 
 .prototype-top-left {
@@ -710,9 +711,12 @@ Section 4: Prototype
 }
 
 .prototype-top-right {
+    display: flex;
     flex: 1;
     max-width: 400px;
+    justify-content: center;
 }
+
 
 .three-iterations {
     display: flex;
@@ -786,6 +790,11 @@ Section 4: Prototype
     margin-bottom: 60px;
 }
 
+#arrow-tornado {
+    height: 200px;
+    width: auto;
+    justify-self: center;
+}
 
 @media (max-width: 768px) {
     .prototype-top {
@@ -1103,7 +1112,7 @@ Section 5: Reflection
 
 .accessibility-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     padding: 20px;
     background-color: white;
@@ -1165,7 +1174,7 @@ Section 5: Reflection
 
 .next-step-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     padding: 25px;
     background: linear-gradient(135deg, white 0%, #f8f9fa 100%);

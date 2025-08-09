@@ -1158,7 +1158,7 @@ Section 7: Conclusion
 
 .accessibility-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     padding: 20px;
     background-color: white;
