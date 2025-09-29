@@ -268,10 +268,6 @@ Section 1
     background-color: var(--gray-active);
 }
 
-.typed-text, .typed-text-es {
-    letter-spacing: 0.1rem;
-}
-
 
 /* ====================================================================================
 Section 2
@@ -417,7 +413,6 @@ Typewriter Effect
     border-right: 0.1em solid var(--gray-color); 
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: 0.05em;
     animation: typing 1s steps(12, end), blink-caret 0.5s step-end 0s 3.0 forwards;
     width: fit-content;
 }
@@ -427,7 +422,6 @@ Typewriter Effect
     border-right: 0.1em solid var(--gray-color); 
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: 0.05em;
     animation: typing-es 1s steps(16, end), blink-caret 0.5s step-end 0s 3.0 forwards;
     width: fit-content;
 }
