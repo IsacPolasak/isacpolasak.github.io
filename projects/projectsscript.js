@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check which page we're on by looking for specific sections
         const empathizeSection = document.getElementById('empathize'); // BIB page
         const planSection = document.getElementById('plan'); // Anvaya page
+        const challengesSection = document.getElementById('challenges'); // NYCHC page
         const footer = document.querySelector('footer');
         
         if (!footer || !sectionTracker) return;
 
         // Determine the trigger section based on which page we're on
-        const triggerSection = empathizeSection || planSection;
+        const triggerSection = empathizeSection || planSection || challengesSection;
         if (!triggerSection) return;
 
         const triggerTop = triggerSection.offsetTop;
