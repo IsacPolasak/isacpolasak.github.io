@@ -49,10 +49,28 @@
                         <p id="paragraph-one">I got into UX because I'm fascinated by how people think, what they need, and why things work (or don't). With a background in biology and computer science, I've studied complex systems: human, digital, and in between. I'm analytical and love being creative, which is why design makes sense to me.  I enjoy making systems work better, and I'm not afraid to test, break, and rebuild until they do.</p>
                         <p>Outside of design, I love trying new things – food, sports,  even knitting (I usually have a project or two... or three in progress). I've lived in Seattle, NYC, and Miami, all of which feel like home in different ways. I also love languages and  speak three and a half (I'm almost there with the fourth!). At the end of the day, I'm just someone who's curious, driven, and always looking for ways to make experiences better for users, for teams, and for the world around me.</p>
                     </div>
+                    
                     <div id="my-projects">
                         <h3>Some of my projects</h3>
-                        <img src="./photos/projects-carousel.jpeg" alt="my-projects" id="project-carousel">
+                        <section class="container">
+                            <div class="slide-wrapper">
+                                <div class="slider">
+                                    <img id="slide-1" src="./photos/projects-carousel1.jpeg" alt="knitting project: green sweater">
+                                    <img id="slide-2" src="./photos/projects-carousel2.jpeg" alt="knitting project: halibut sweater">
+                                    <img id="slide-3" src="./photos/projects-carousel3.jpeg" alt="knitting project: red sweater">
+                                </div>
+                                <div class="slider-nav">
+                                    <a href="#slide-1" onclick="event.preventDefault(); document.getElementById('slide-1').scrollIntoView({behavior: 'smooth', block: 'nearest'})"></a>
+                                    <a href="#slide-2" onclick="event.preventDefault(); document.getElementById('slide-2').scrollIntoView({behavior: 'smooth', block: 'nearest'})"></a>
+                                    <a href="#slide-3" onclick="event.preventDefault(); document.getElementById('slide-3').scrollIntoView({behavior: 'smooth', block: 'nearest'})"></a>
+                                </div>
+                            </div>
+                        </section>
                     </div>
+
+
+
+
                     <div class="cat-pic-desc">
                         <h3>Oh, and meet my 2 coworkers!</h3>
                         <div id="cat-pics">
