@@ -191,7 +191,7 @@ h3 {
 .center-section {
     display: flex;
     justify-content: center;
-    margin: 50px 10px 100px 10px;
+    margin: 50px 10px -50px 10px;
 }
 
 .center-section section {
@@ -339,6 +339,10 @@ Mobile Responsive
 ==================================================================================== */
 
 @media (max-width: 1000px) {
+    .center-section {
+        margin: 50px 10px 100px 10px;
+    }
+
     .center-section section {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
