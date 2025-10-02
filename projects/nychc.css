@@ -361,7 +361,6 @@ h5 {
     flex-direction: column;
     width: 100%;
     max-width: 820px;
-    margin-bottom: 60px;
     border-top: solid 2px var(--gray-color);
     padding-top: 50px;
 }
@@ -373,6 +372,14 @@ h5 {
     max-width: 820px;
 }
 
+.challenges-paragraphs {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    max-width: 820px;
+    margin-bottom: 60px;
+}
+
 .challenges-top-left {
     flex: 1;
     max-width: 400px;
@@ -381,26 +388,6 @@ h5 {
 .challenges-top-right {
     flex: 1;
     max-width: 400px;
-}
-
-.challenges-paragraphs {
-    display: flex;
-    gap: 60px;
-}
-
-#landing-challenges {
-    max-width: 400px;
-    width: 100%;
-}
-
-.challenges-points {
-    display: flex;
-    gap: 60px;
-}
-
-.challenge-points-list {
-    max-width: 400px;
-    width: 100%;
 }
 
 
@@ -414,11 +401,30 @@ ol {
     margin-bottom: 15px;
 }
 
+.challenges-points {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    max-width: 820px;
+}
+
+#landing-challenges {
+    flex: 1;
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+}
+
+.challenge-points-list {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+}
+
 
 /* ====================================================================================
 Section 3: Redesign
 ==================================================================================== */
-
 
 
 .redesign {
