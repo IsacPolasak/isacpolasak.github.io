@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset='UTF-8'>
     <meta name="robots" content="noindex,nofollow,noarchive">
@@ -49,15 +49,33 @@
                         <p id="paragraph-one">Empecé en UX porque me fascina entender cómo piensa la gente, qué necesita y por qué las cosas funcionan (o no). Con formación en biología e informática, he estudiado sistemas complejos: humanos, digitales, e intermedios. Soy analítico y me encanta ser creativo, por eso el diseño UX tiene sentido para mí. Disfruto hacer que los sistemas funcionen mejor, y no me asusta probar, romper y reconstruir hasta que lo logre.</p>
                         <p>Fuera del diseño, me encanta probar cosas nuevas: comida, deportes, incluso tejer (siempre tengo uno o dos... o tres proyectos en marcha). He vivido en Seattle, Nueva York y Miami, donde me siento como en casa de diferentes maneras. También me encantan los idiomas y hablo tres y medio (¡ya casi llego al cuarto!). Soy una persona curiosa, motivada y siempre en busca de cómo mejorar las experiencias de los usuarios, los equipos y del mundo que me rodea.</p>
                     </div>
+                    
                     <div id="my-projects">
                         <h3>Proyectos personales</h3>
-                        <img src="../photos/projects-carousel.jpeg" alt="my-projects" id="project-carousel">
+                        <section class="container">
+                            <div class="slide-wrapper">
+                                <div class="slider">
+                                    <img id="slide-1" src="../photos/projects-carousel1.jpeg" alt="proyecto de tejer: suéter verde">
+                                    <img id="slide-2" src="../photos/projects-carousel2.jpeg" alt="proyecto de tejer: suéter de halibut">
+                                    <img id="slide-3" src="../photos/projects-carousel3.jpeg" alt="proyecto de tejer: suéter rojo">
+                                </div>
+                                <div class="slider-nav">
+                                    <a href="#slide-1" onclick="event.preventDefault(); document.getElementById('slide-1').scrollIntoView({behavior: 'smooth', block: 'nearest'})"></a>
+                                    <a href="#slide-2" onclick="event.preventDefault(); document.getElementById('slide-2').scrollIntoView({behavior: 'smooth', block: 'nearest'})"></a>
+                                    <a href="#slide-3" onclick="event.preventDefault(); document.getElementById('slide-3').scrollIntoView({behavior: 'smooth', block: 'nearest'})"></a>
+                                </div>
+                            </div>
+                        </section>
                     </div>
+
+
+
+
                     <div class="cat-pic-desc">
                         <h3>¡Y mis compañeros de trabajo!</h3>
                         <div id="cat-pics">
-                            <img src="../photos/nieta.png" alt="Nieta (Gray cat)" id="nieta">
-                            <img src="../photos/ahava.png" alt="Ahava (Black cat)" id="ahava">
+                            <img src="../photos/nieta.png" alt="Nieta (Gato gris)" id="nieta">
+                            <img src="../photos/ahava.png" alt="Ahava (Gato negro)" id="ahava">
                         </div>
                     </div>
                 </section>
@@ -72,8 +90,8 @@
                     <a href="../isacpolasakresume.pdf" target="_blank" class="resume-button">Currículum</a>
                 </div>
                 <div id="footer-right-side">
-                    <img src="../photos/tigerclosed.svg" alt="tiger with eyes closed" id="tiger-closed">
-                    <img src="../photos/tigeropen.svg" alt="tiger with eyes open"  id="tiger-open">
+                    <img src="../photos/tigerclosed.svg" alt="tigre con ojos cerrados" id="tiger-closed">
+                    <img src="../photos/tigeropen.svg" alt="tigre con ojos abiertos"  id="tiger-open">
                 </div>
         </footer>
     </body>
