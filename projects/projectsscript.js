@@ -91,19 +91,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const landingImage = document.getElementById('landing-challenges');
+    const zoomableImages = document.querySelectorAll('.zoomable-image');
     
-    if (landingImage) {
-        landingImage.addEventListener('click', function(e) {
+    zoomableImages.forEach(image => {
+        image.addEventListener('click', function(e) {
             e.stopPropagation();
             this.classList.toggle('zoomed');
         });
-        
-        // Click anywhere to close
-        document.addEventListener('click', function() {
-            if (landingImage.classList.contains('zoomed')) {
-                landingImage.classList.remove('zoomed');
+    });
+    
+    // Click anywhere to close
+    document.addEventListener('click', function() {
+        zoomableImages.forEach(image => {
+            if (image.classList.contains('zoomed')) {
+                image.classList.remove('zoomed');
             }
         });
-    }
+    });
 });

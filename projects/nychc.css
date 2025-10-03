@@ -409,7 +409,7 @@ ol {
 }
 
 
-#landing-challenges {
+.zoomable-image {
     max-width: 380px;
     width: 100%;
     height: auto;
@@ -418,7 +418,7 @@ ol {
     display: block;
 }
 
-#landing-challenges.zoomed {
+ .zoomable-image.zoomed {
     transform: scale(1.5);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     z-index: 10;
