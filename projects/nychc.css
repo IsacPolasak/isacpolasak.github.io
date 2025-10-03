@@ -408,11 +408,21 @@ ol {
     max-width: 820px;
 }
 
+
 #landing-challenges {
-    flex: 1;
     max-width: 380px;
     width: 100%;
     height: auto;
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+#landing-challenges.zoomed {
+    transform: scale(1.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    cursor: zoom-out;
 }
 
 .challenge-points-list {

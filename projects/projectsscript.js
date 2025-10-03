@@ -87,3 +87,23 @@ document.addEventListener('DOMContentLoaded', function() {
     updateNavVisibility();
     updateActiveSection();
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const landingImage = document.getElementById('landing-challenges');
+    
+    if (landingImage) {
+        landingImage.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('zoomed');
+        });
+        
+        // Click anywhere to close
+        document.addEventListener('click', function() {
+            if (landingImage.classList.contains('zoomed')) {
+                landingImage.classList.remove('zoomed');
+            }
+        });
+    }
+});
