@@ -109,3 +109,96 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const zoomableImages = document.querySelectorAll('.zoomable-image');
+    
+    zoomableImages.forEach(image => {
+        image.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('zoomed');
+        });
+    });
+    
+    // Click anywhere to close
+    document.addEventListener('click', function() {
+        zoomableImages.forEach(image => {
+            if (image.classList.contains('zoomed')) {
+                image.classList.remove('zoomed');
+            }
+        });
+    });
+});
+
+// Before/After Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const sliders = document.querySelectorAll('.slider-container');
+    
+    sliders.forEach(slider => {
+        const handle = slider.querySelector('.slider-handle');
+        const afterImage = slider.querySelector('.after-image');
+        const sliderImages = slider.querySelector('.slider-images');
+        let isDragging = false;
+        
+        // Set initial height based on image
+        const beforeImg = slider.querySelector('.before-image');
+        beforeImg.onload = function() {
+            sliderImages.style.height = this.height + 'px';
+        };
+        if (beforeImg.complete) {
+            sliderImages.style.height = beforeImg.height + 'px';
+        }
+        
+        function updateSlider(x) {
+            const rect = slider.getBoundingClientRect();
+            const offsetX = x - rect.left;
+            const percentage = Math.max(0, Math.min(100, (offsetX / rect.width) * 100));
+            
+            handle.style.left = percentage + '%';
+            afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        }
+        
+        handle.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            e.preventDefault();
+        });
+        
+        slider.addEventListener('click', function(e) {
+            if (!isDragging && e.target !== handle && !handle.contains(e.target)) {
+                updateSlider(e.clientX);
+            }
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                updateSlider(e.clientX);
+            }
+        });
+        
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+        
+        // Touch support
+        handle.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            e.preventDefault();
+        });
+        
+        document.addEventListener('touchmove', function(e) {
+            if (isDragging) {
+                const touch = e.touches[0];
+                updateSlider(touch.clientX);
+            }
+        });
+        
+        document.addEventListener('touchend', function() {
+            isDragging = false;
+        });
+    });
+});
