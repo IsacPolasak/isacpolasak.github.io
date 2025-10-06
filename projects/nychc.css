@@ -793,7 +793,7 @@ Section 5: Reflection
     margin-bottom: 40px;
 }
 
-.comparison-container {
+#comparison-container-top {
     margin-bottom: 60px;
 }
 
@@ -930,5 +930,103 @@ Section 5: Reflection
     .slider-button::after {
         right: 10px;
         border-width: 6px 0 6px 8px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ====================================================================================
+Mobile Responsive Styles - Add these to your nychc.css file
+==================================================================================== */
+
+/* Tablet and Mobile - 768px and below */
+@media (max-width: 768px) {
+    /* Challenges Section */
+    .challenges-top {
+        max-width: 100%;
+    }
+    
+    .challenges-paragraphs {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .challenges-top-left,
+    .challenges-top-right {
+        max-width: 100%;
+    }
+    
+    .challenges-middle {
+        max-width: 100%;
+    }
+    
+    .challenges-points {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .zoomable-image {
+        max-width: 100%;
+    }
+    
+    .challenge-points-list {
+        max-width: 100%;
+    }
+
+    /* Redesign Section */
+    .redesign-middle {
+        max-width: 100%;
+    }
+    
+    .redesign-middle .challenges-points {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .redesign-middle .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .redesign-middle .zoomable-image {
+        max-width: 100%;
+    }
+    
+    .redesign-middle .challenge-points-list {
+        max-width: 100%;
+    }
+
+    .last-li {
+        margin-bottom: 0px !important;
+    }
+
+    #nychc-preview {
+        height: 300px;
+        margin-top: 30px;
+    }
+}
+
+/* Extra Small Devices - 450px and below */
+@media (max-width: 450px) {
+    #back-to-top {
+        max-width: 80vw;
+        text-align: center;
+        padding: 8px 80px 0px 80px;
     }
 }
