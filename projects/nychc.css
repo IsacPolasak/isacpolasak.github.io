@@ -1083,3 +1083,22 @@ Mobile Responsive Styles - Add these to your nychc.css file
 
 
 
+
+
+.image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.challenges-points,
+.redesign-middle .challenges-points {
+    position: relative;
+}
+
+.zoomable-image.zoomed {
+    transform: scale(1.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    cursor: zoom-out;
+    position: relative; /* Make sure this is here */
+}

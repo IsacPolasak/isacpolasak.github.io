@@ -89,14 +89,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const zoomableImages = document.querySelectorAll('.zoomable-image');
+    
+    console.log('Found images:', zoomableImages.length); // Should show how many images found
     
     zoomableImages.forEach(image => {
         image.addEventListener('click', function(e) {
             e.stopPropagation();
+            console.log('Image clicked!', this); // Will confirm click works
             this.classList.toggle('zoomed');
+            console.log('Classes after toggle:', this.classList); // Shows if zoomed class added
         });
     });
     
@@ -114,26 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    const zoomableImages = document.querySelectorAll('.zoomable-image');
-    
-    zoomableImages.forEach(image => {
-        image.addEventListener('click', function(e) {
-            e.stopPropagation();
-            this.classList.toggle('zoomed');
-        });
-    });
-    
-    // Click anywhere to close
-    document.addEventListener('click', function() {
-        zoomableImages.forEach(image => {
-            if (image.classList.contains('zoomed')) {
-                image.classList.remove('zoomed');
-            }
-        });
-    });
-});
 
 // Before/After Slider Functionality
 document.addEventListener('DOMContentLoaded', function() {
