@@ -1068,6 +1068,13 @@ Mobile Responsive Styles - Add these to your nychc.css file
         height: 300px;
         margin-top: 30px;
     }
+
+    .prototype-button {
+        font-size: 1.3rem;
+        font-weight: 700;
+        padding: 25px 25px;
+        letter-spacing: 0px;
+    }
 }
 
 /* Extra Small Devices - 450px and below */
