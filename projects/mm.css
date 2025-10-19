@@ -408,6 +408,10 @@ span {
 }
 
 @media (max-width: 768px) {
+    .empathize-header {
+        margin-top: 10px;
+    }
+
     .empathize-middle {
         flex-direction: column;
         gap: 30px;
