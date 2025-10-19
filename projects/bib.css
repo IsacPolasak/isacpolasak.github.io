@@ -1257,10 +1257,17 @@ Section 7: Conclusion
     }
 }
 
-#back-to-top {
+#back-to-top-container {
     display: flex;
-    align-self: center;
-    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#back-to-top {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
     text-align: center;
     background-color: var(--gray-color);
     color: var(--greige-color);
@@ -1282,6 +1289,16 @@ Section 7: Conclusion
     background-color: var(--gray-active);
     box-shadow: none;
 }
+
+@media (max-width: 450px) {
+    #back-to-top {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 8px 20px 0px 20px;
+    }
+}
+
 
 
 #section-tracker {
@@ -1387,9 +1404,4 @@ Section 7: Conclusion
         margin-bottom: 8px;
     }
 
-
-    #back-to-top {
-        max-width: 80vw;
-        text-align: center;
-    }
 }

@@ -220,6 +220,14 @@ footer img {
     box-shadow: none;
 }
 
+@media (max-width: 450px) {
+    #back-to-top {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 8px 20px 0px 20px;
+    }
+}
 
 
 
@@ -1077,15 +1085,7 @@ Mobile Responsive Styles - Add these to your nychc.css file
 
 }
 
-/* Extra Small Devices - 450px and below */
-@media (max-width: 450px) {
-    #back-to-top {
-        width: 80vw;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 8px 20px 0px 20px;
-    }
-}
+
 
 
 
